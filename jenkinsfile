@@ -1,16 +1,14 @@
-pipeline
-{
-
-agent any
-stages("checkout_sourcecode")
- {
-stage 
- {
-   steps
-   {
-    git branch: 'main',url: 'https://github.com/satyajit-rout-312/demo1.git'
-   }
+pipeline {
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+    }
+    stages {
+        stage('checkout_sourcecode') {
+            steps {
+                
+            }
+        }
+    }
 }
-}
-}
-   
